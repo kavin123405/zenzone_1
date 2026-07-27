@@ -122,10 +122,8 @@ function Home() {
         }
 
         .calm-slider {
-           flex: 1;
-           max-width: 1500px;
-           height: 700px;          
-           width: 100%;
+           width: 50%;
+           height: 500px;          
            position: relative;
            overflow: hidden;
            border-radius: 25px;
@@ -144,6 +142,10 @@ function Home() {
         .calm-slider img.active {
           opacity: 1;
           transform: scale(1.08);
+        }
+
+        .hero-content {
+          width: 45%;
         }
 
         .hero-content h1 {
@@ -216,7 +218,10 @@ function Home() {
           }
           .calm-slider {
             width: 100%;
-            height: 350px;
+            height: 300px;
+          }
+          .hero-content {
+            width: 100%;
           }
           .hero-content h1 {
             font-size: 36px;

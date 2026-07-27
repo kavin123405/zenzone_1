@@ -19,19 +19,7 @@ if (!global.mockUsersArray) {
 }
 
 function readLocalUsers() {
-  try {
-    if (fs.existsSync(dbPath)) {
-      const data = JSON.parse(fs.readFileSync(dbPath, "utf8"));
-      if (data && data.length > 0) {
-        global.mockUsersArray = data;
-        return global.mockUsersArray;
-      }
-    }
-  } catch (e) {
-    // Ignore read errors
-  }
-  
-  // Try /tmp fallback
+  // Try /tmp fallback first since it is updated at runtime
   try {
     const tmpPath = path.join("/tmp", "mock_db.json");
     if (fs.existsSync(tmpPath)) {
@@ -43,6 +31,19 @@ function readLocalUsers() {
     }
   } catch (e) {
     // Ignore tmp read errors
+  }
+
+  // Fallback to static packaged database
+  try {
+    if (fs.existsSync(dbPath)) {
+      const data = JSON.parse(fs.readFileSync(dbPath, "utf8"));
+      if (data && data.length > 0) {
+        global.mockUsersArray = data;
+        return global.mockUsersArray;
+      }
+    }
+  } catch (e) {
+    // Ignore read errors
   }
 
   return global.mockUsersArray;

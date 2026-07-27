@@ -10,6 +10,8 @@ import Booking from "./features/Booking";
 import Resource from "./features/Resource";
 import Volunteer from "./features/Volunteer";
 import Chatbot from "./features/Chatbot";
+import Wellness from "./features/Wellness";
+import Avatar from "./features/Avatar";
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
@@ -28,6 +30,8 @@ function App() {
         <Route path="/resource" element={<Resource />} />
         <Route path="/volunteer" element={<Volunteer />} />
         <Route path="/chatbot" element={<Chatbot />} />
+        <Route path="/wellness" element={<Wellness />} />
+        <Route path="/avatar" element={<Avatar />} />
         <Route path="/auth" element={<Auth />} />
       
       </Routes>

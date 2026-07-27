@@ -285,7 +285,7 @@ function Home() {
            ["Doctor Appointment", "https://cdn-icons-png.flaticon.com/512/387/387561.png", "/booking"],
            ["Volunteer Support", "https://cdn-icons-png.flaticon.com/512/1946/1946429.png", "/volunteer"],
            ["Resource Hub", "https://cdn-icons-png.flaticon.com/512/2917/2917242.png", "/resource"],
-           ["Wellness Tracking", "https://cdn-icons-png.flaticon.com/512/2913/2913461.png", "/"],
+           ["Wellness Tracking", "https://cdn-icons-png.flaticon.com/512/2913/2913461.png", "/wellness"],
            ["Virtual Avatar", "https://cdn-icons-png.flaticon.com/512/4712/4712027.png", "/avatar"]
           ].map(([title, img, link], i) => (
         <div

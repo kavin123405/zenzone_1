@@ -63,8 +63,8 @@ function Auth() {
       const data = await res.json();
 
       if (res.ok) {
-        alert(data.message);
-        navigate("/home");
+        alert(data.message + " - Please login now 🌿");
+        setIsSignup(false);
       } else {
         alert(data.error || "Signup failed");
       }
